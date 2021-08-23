@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+:root{
+    --tranh: 60px;
+    --tranv: -60px;
+}
+
+.container{
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin-top: 200px;
+    background: rgba(0, 0,0, 0.1);
+    transform: rotate(-30deg) skew(25deg) scale(0.8);
+    transition: 0.5s;
+
+}
+
+.container img{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.container:hover img:nth-child(4)
+{
+    transform: translate(calc(var(--tranh)*4),calc(var(--tranv)*4));
+    opacity: 1;
+}
+
+.container:hover img:nth-child(3)
+{
+    transform: translate(calc(var(--tranh)*3),calc(var(--tranv)*3));
+    opacity: 0.8;
+}
+
+.container:hover img:nth-child(2)
+{
+    transform: translate(calc(var(--tranh)*2),calc(var(--tranv)*2));
+    opacity: 0.8;
+}
+
+.container:hover img:nth-child(1)
+{
+    transform: translate(var(--tranh),var(--tranv));
+    opacity: 0.8;
+}
+
